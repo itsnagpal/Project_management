@@ -1,0 +1,32 @@
+const projects = [
+  {
+    id: 1,
+    name: "Website Redesign",
+    description: "Redesign company website",
+    status: "IN_PROGRESS",
+    priority: "HIGH",
+    startDate: "2026-09-01",
+    dueDate: "2026-10-01",
+    members: [1, 2, 3],
+  },
+  {
+    id: 1,
+    name: "Website Redesign",
+    description: "Redesign company website",
+    status: "IN_PROGRESS",
+    priority: "HIGH",
+    startDate: "2026-09-01",
+    dueDate: "2026-10-01",
+    members: [1, 2, 3],
+  },
+  {
+    id: 1,
+    name: "Website Redesign",
+    description: "Redesign company website",
+    status: "IN_PROGRESS",
+    priority: "HIGH",
+    startDate: "2026-09-01",
+    dueDate: "2026-10-01",
+    members: [1, 2, 3],
+  },
+];
