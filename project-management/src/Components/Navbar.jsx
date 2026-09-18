@@ -15,7 +15,7 @@ export default function Navbar() {
     <header className="navbar">
       <span className="navbar-brand">ProjectHub</span>
       <div className="navbar-user">
-        <span>{currentUser?.name}</span>
+        <span>{currentUser.name}</span>
         <button onClick={handleLogout}>Logout</button>
       </div>
     </header>
