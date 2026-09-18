@@ -1,17 +1,19 @@
-import { initialProjects, initialTasks } from "../data/projectsMockData"
-import StatsCard from "./StatsCard"
+// import { initialProjects, initialTasks } from "../data/projectsMockData"
+import { useProject } from "../context/ProjectContext"
+import StatsCard from "./StatsCard.jsx"
 import "../styles/Dashboard.css"
 
 
-function isOverdue(task) {
+export function isOverdue(task) {
 const today = new Date()
 today.setHours(0, 0, 0, 0)
 return new Date(task.dueDate) < today && task.status !== "COMPLETED"
 }
 
 export default function Dashboard() {
-  const projects = initialProjects
-  const tasks= initialTasks
+  
+  const {projects,tasks} = useProject()
+
   const projectName = projects.map(u => u.name)
 
   const activeProjects = projects.filter(project => project.status === "IN_PROGRESS").length
@@ -27,7 +29,7 @@ export default function Dashboard() {
     <div className="dashboard">
       <h1>Dashboard</h1>
       <div className="dashboard-stats">
-        <StatsCard label="Projects" value={totalProjects} />
+        <StatsCard label="Total Projects" value={totalProjects} />
         <StatsCard label="Active Projects" value={activeProjects} />
         <StatsCard label="Total Tasks" value={totalTasks} />
         <StatsCard label="Completed" value={completedTasks} />

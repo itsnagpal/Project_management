@@ -15,7 +15,7 @@ export const users = [
   },
   {
     id: 3,
-    name: "Suhani Mehta",
+    name: "Suhani Lodhi",
     email: "suhani@gmail.com",
     password: "suhani",
     role: "user",

@@ -34,7 +34,8 @@ export function AuthProvider({ children }) {
 
   function logout() {
     setCurrentUser(null)
-    localStorage.removeItem("currentUser")
+    const itemsToRemove = ["tasks","projects","currentUser"]
+    itemsToRemove.forEach(key=>localStorage.removeItem(key))
   }
 
   const value = {

@@ -62,7 +62,7 @@ export const initialProjects = [
 ];
 
 export const initialTasks = [
-  // ---- Website Redesign (project 1) ----
+
   {
     id: 101,
     projectId: 1,

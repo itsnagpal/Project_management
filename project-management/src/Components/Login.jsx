@@ -20,7 +20,12 @@ export default function Login() {
     const result = login(formData.email, formData.password)
 
     if (result.success) {
-      navigate("/dashboard")
+      if(result.user.role === "admin"){
+        navigate("/admin/dashboard")
+      }
+      if (result.user.role ==="user"){
+        navigate("/user/dashboard")
+      }
     } else {
       setError(result.message)
     }
