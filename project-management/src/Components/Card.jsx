@@ -50,7 +50,8 @@ export function TaskCard({ task, onToggleComplete }) {
           {formatLabel(task.status)}
         </span>
       </div>
-
+      <p className="app-card-description">{task.projectId}</p>
+    
       <p className="app-card-description">{task.description}</p>
 
       <div className="app-card-meta">
@@ -61,12 +62,11 @@ export function TaskCard({ task, onToggleComplete }) {
       </div>
 
       <div className="app-card-footer">
-        <button
+        {!isDone && <button
           className="app-card-complete-btn"
           onClick={() => onToggleComplete(task)}
-        >
-          {isDone ? "Mark as Todo" : "Mark as Completed"}
-        </button>
+        > Mark as Complete
+        </button>}
       </div>
     </div>
   )

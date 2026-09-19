@@ -6,7 +6,8 @@ import ProtectedRoute from "./Components/ProtectedRoute"
 import Layout from "./Components/Layout"
 import Login from "./Components/Login"
 import UserDashboard from "./Components/UserDashboard"
-import MyProjects from "./Components/Projects"
+import MyProjects from "./Components/MyProjects"
+import MyTasks from "./Components/MyTask"
 
 const Dashboard = lazy(() => import("./Components/Dashboard"))
 
@@ -42,6 +43,7 @@ export default function App() {
               >
                 <Route path="dashboard" element={<UserDashboard/>} />
                 <Route path="projects" element={<MyProjects/>}/>
+                <Route path="my-tasks" element={<MyTasks/>}/>
               </Route>
 
               <Route path="*" element={<NotFound />} />
