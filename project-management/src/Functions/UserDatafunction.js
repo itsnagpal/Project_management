@@ -1,6 +1,6 @@
 import { useAuth } from "../context/Authcontext";
 import { useProject } from "../context/ProjectContext";
-import { isOverdue } from "../Components/Dashboard";
+import { isOverdue } from "../admin-pages/Dashboard";
 
 export function useUserDashboardData() {
   const { currentUser } = useAuth();

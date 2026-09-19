@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useUserDashboardData } from "../Functions/UserDatafunction";
-import { ProjectCard } from "./Card";
+import { ProjectCard } from "../Components/Card";
 
 export default function MyProjects(){
   const { myProjects } = useUserDashboardData()

@@ -1,5 +1,5 @@
 import { useUserDashboardData } from "../Functions/UserDatafunction.js"
-import StatsCard from "./StatsCard.jsx"
+import StatsCard from "../Components/StatsCard.jsx"
 
 import "../styles/Dashboard.css"
 

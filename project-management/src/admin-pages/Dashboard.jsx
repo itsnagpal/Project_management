@@ -1,6 +1,6 @@
 // import { initialProjects, initialTasks } from "../data/projectsMockData"
-import { useProject } from "../context/ProjectContext"
-import StatsCard from "./StatsCard.jsx"
+import { useProject } from "../context/ProjectContext.jsx"
+import StatsCard from "../Components/StatsCard.jsx"
 import "../styles/Dashboard.css"
 
 

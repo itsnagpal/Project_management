@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { useUserDashboardData } from "../Functions/UserDatafunction"
 import { useProject } from "../context/ProjectContext"
-import { TaskCard } from "./Card"
+import { TaskCard } from "../Components/Card"
 
 export default function MyTasks() {
   const { myTasks, myProjects } = useUserDashboardData()

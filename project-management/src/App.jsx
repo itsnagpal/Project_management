@@ -5,12 +5,12 @@ import { ProjectProvider } from "./context/ProjectContext"
 import ProtectedRoute from "./Components/ProtectedRoute"
 import Layout from "./Components/Layout"
 import Login from "./Components/Login"
-import UserDashboard from "./Components/UserDashboard"
-import MyProjects from "./Components/MyProjects"
-import MyTasks from "./Components/MyTask"
+import UserDashboard from "./user-pages/UserDashboard"
+import MyProjects from "./user-pages/MyProjects"
+import MyTasks from "./user-pages/MyTask"
 import Profile from "./Components/Profile"
 
-const Dashboard = lazy(() => import("./Components/Dashboard"))
+const Dashboard = lazy(() => import("./admin-pages/Dashboard"))
 
 function NotFound() {
   return <h2>404 - Page Not Found</h2>
