@@ -5,7 +5,8 @@ import { ProjectProvider } from "./context/ProjectContext"
 import ProtectedRoute from "./Components/ProtectedRoute"
 import Layout from "./Components/Layout"
 import Login from "./Components/Login"
-import AdminDashboard from "./Components/AdminDashboard"
+import UserDashboard from "./Components/UserDashboard"
+import MyProjects from "./Components/Projects"
 
 const Dashboard = lazy(() => import("./Components/Dashboard"))
 
@@ -39,7 +40,8 @@ export default function App() {
                   </ProtectedRoute>
                 }
               >
-                <Route path="dashboard" element={<AdminDashboard/>} />
+                <Route path="dashboard" element={<UserDashboard/>} />
+                <Route path="projects" element={<MyProjects/>}/>
               </Route>
 
               <Route path="*" element={<NotFound />} />
