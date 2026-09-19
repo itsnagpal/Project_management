@@ -37,12 +37,20 @@ export function AuthProvider({ children }) {
     const itemsToRemove = ["tasks","projects","currentUser"]
     itemsToRemove.forEach(key=>localStorage.removeItem(key))
   }
+  function updateProfile(updates) {
+    setCurrentUser(prev => {
+      const updated = { ...prev, ...updates }
+      localStorage.setItem("currentUser", JSON.stringify(updated))
+      return updated
+    })
+  }
 
   const value = {
     currentUser,
     isAuthenticated: !!currentUser,
     login,
-    logout
+    logout,
+    updateProfile
   }
 
   if (isLoading) {

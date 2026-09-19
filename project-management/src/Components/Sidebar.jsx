@@ -23,7 +23,7 @@ export default function Sidebar() {
           <NavLink to="/user/projects">My Projects</NavLink>
           <NavLink to="/user/my-tasks">My Tasks</NavLink>
           <NavLink to="/user/team">Team</NavLink>
-          <NavLink to="/user/profile">Settings</NavLink>
+          <NavLink to="/user/profile">Profile</NavLink>
         </nav>
       )}
     </> 
