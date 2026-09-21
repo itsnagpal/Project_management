@@ -29,7 +29,7 @@ export function ProjectProvider({children}){
     setProjects(prev => [...prev, newProject])
   }
   function updateProject(id,update){
-    setProjects(prev => prev.map(p => p.id === id ? [...p, ...update]:p))
+    setProjects(prev => prev.map(p => (p.id === id ? {...p, ...update}:p)))
   }
   function deleteProject(id){
     setProjects(prev => prev.filter(p => p.id !== id ))

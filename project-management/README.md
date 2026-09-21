@@ -1,16 +1,16 @@
-# React + Vite
+## CLASS NAME CONVENTION
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+I have tried to write the class name as
+Component-feature-tag
 
-Currently, two official plugins are available:
+Every class must start with the component name so that we can figure it out even in global css
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## JSX FILE
 
-## React Compiler
+I have user-pages, admin-pages for specific pages that belong to a particular users
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+In components folder, i have added the small componnets used accross different pages and even pages with are common to both user and admin,
 
-## Expanding the ESLint configuration
+In Function, as of now, we have user data function which give data of the current user
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+App.jsx -- it compatain the main routes, and structure of our whole App

@@ -8,9 +8,19 @@ function formatLabel(value) {
     .join(" ")
 }
 
-export function ProjectCard({ project }) {
+export function ProjectCard({ project, onOpen, onEdit, onDelete }) {
+  function stop(handler) {
+    return event => {
+      event.stopPropagation()
+      handler()
+    }
+  }
+
   return (
-    <div className="app-card">
+    <div
+      className="app-card app-card-clickable"
+      onClick={onOpen ? () => onOpen(project) : undefined}
+    >
       <div className="app-card-header">
         <h3 className="app-card-title">{project.name}</h3>
         <span
@@ -34,12 +44,23 @@ export function ProjectCard({ project }) {
           {project.members.length} member
           {project.members.length !== 1 ? "s" : ""}
         </span>
+
+        {(onEdit || onDelete) && (
+          <div className="app-card-actions">
+            {onEdit && (
+              <button onClick={stop(() => onEdit(project))}>Edit</button>
+            )}
+            {onDelete && (
+              <button onClick={stop(() => onDelete(project))}>Delete</button>
+            )}
+          </div>
+        )}
       </div>
     </div>
   )
 }
 
-export function TaskCard({ task, onToggleComplete }) {
+export function TaskCard({ task, onToggleComplete, onEdit, onDelete }) {
   const isDone = task.status === "COMPLETED"
 
   return (
@@ -50,8 +71,7 @@ export function TaskCard({ task, onToggleComplete }) {
           {formatLabel(task.status)}
         </span>
       </div>
-      <p className="app-card-description">{task.projectId}</p>
-    
+
       <p className="app-card-description">{task.description}</p>
 
       <div className="app-card-meta">
@@ -62,11 +82,23 @@ export function TaskCard({ task, onToggleComplete }) {
       </div>
 
       <div className="app-card-footer">
-        {!isDone && <button
-          className="app-card-complete-btn"
-          onClick={() => onToggleComplete(task)}
-        > Mark as Complete
-        </button>}
+        {onToggleComplete && (
+          <button
+            className="app-card-complete-btn"
+            onClick={() => onToggleComplete(task)}
+          >
+            {isDone ? "Mark as Todo" : "Mark as Completed"}
+          </button>
+        )}
+
+        {(onEdit || onDelete) && (
+          <div className="app-card-actions">
+            {onEdit && <button onClick={() => onEdit(task)}>Edit</button>}
+            {onDelete && (
+              <button onClick={() => onDelete(task)}>Delete</button>
+            )}
+          </div>
+        )}
       </div>
     </div>
   )
