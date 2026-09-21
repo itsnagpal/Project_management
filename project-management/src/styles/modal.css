@@ -1,0 +1,13 @@
+/* .modal {
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+} */
+
+.modal-close-btn {
+  font-size: 16px;
+  color: var(--muted);
+  padding: 4px 8px;
+  border-radius: 8px;
+  background-color: var(--blush-pop);
+}

@@ -13,7 +13,7 @@ export default function Sidebar() {
           <NavLink to="/admin/projects">Projects</NavLink>
           {/* <NavLink to="/admin/my-tasks">My Tasks</NavLink> */}
           <NavLink to="/admin/team">Team</NavLink>
-          <NavLink to="/admin/profile">Settings</NavLink>
+          <NavLink to="/admin/profile">Profile</NavLink>
         </nav>
       )}
 

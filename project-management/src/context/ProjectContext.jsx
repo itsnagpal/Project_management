@@ -37,7 +37,7 @@ export function ProjectProvider({children}){
   }
 
 
-  function addtask(task){
+  function addTask(task){
     const newTask = {...task, id:Date.now() }
     setTasks(prev => [...prev, newTask])
   }
@@ -54,7 +54,7 @@ export function ProjectProvider({children}){
     addProject,
     updateProject,
     deleteProject,
-    addtask,
+    addTask,
     deleteTask,
     updateTask
   }

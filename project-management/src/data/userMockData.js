@@ -34,4 +34,8 @@ export const users = [
     password: "priya123",
     role: "user",
   },
+  {
+    id: 6,
+    name: "Ding Ding",
+  },
 ];
