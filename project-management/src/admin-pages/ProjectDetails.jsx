@@ -114,7 +114,7 @@ export default function ProjectDetails() {
             {members.map(user => (
               <li key={user.id} className="member-list-row">
                 <span className="recent-project-name">{user.name}</span>
-                <span className="app-card-due">{user.email}</span>
+
               </li>
             ))}
           </ul>
